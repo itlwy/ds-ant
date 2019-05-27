@@ -2,7 +2,7 @@ var path = require('path');
 var app = require('express')();
 var ds_dispatcher = require('../lib/ds-dispatcher');
 
-var dispatcher = ds_dispatcher({
+var dispatcher = ds_dispatcher.init({
     api_prefix: '/api/datasource',
     root: path.resolve('./datasource'),
     inject_handler: function () {
@@ -15,6 +15,6 @@ var dispatcher = ds_dispatcher({
         ]
     }
 });
-app.use(dispatcher.middleware());
+app.use(dispatcher);
 
 app.listen(3000);
