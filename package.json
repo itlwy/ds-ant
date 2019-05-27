@@ -1,6 +1,6 @@
 {
   "name": "ds-ant",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a configurable library of intelligently loading data-source and dispatching web request",
   "main": "index.js",
   "scripts": {
